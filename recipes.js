@@ -57,7 +57,7 @@ $("#random-recipe-btn").on("click", function() {
 $("#search-recipe-btn").on("click", function(event) {
     event.preventDefault();
 
-    axios.get("https://api.spoonacular.com/recipes/complexSearch?number=5&apiKey=ac075615bb0947ea8541206866406e74&sort=popularity&query=" + $("#recipe-search-input").val() + "&includeIngredients=" + $("#ingredient-search-input").val())
+    axios.get("https://api.spoonacular.com/recipes/complexSearch?number=10&apiKey=ac075615bb0947ea8541206866406e74&sort=popularity&query=" + $("#recipe-search-input").val() + "&includeIngredients=" + $("#ingredient-search-input").val())
     .then((response) => {
         console.log(response);
 
@@ -96,48 +96,3 @@ $(document).on("click", ".recipe-preview-li", function() {
         displayRecipe(response.data);
     })
 })
-
-// NOTES ON OTHER APIS
-
-// TEXT ANALYSIS API
-
-// var settings = {
-//     "async": true,
-//     "crossDomain": true,
-//     "url": "https://twinword-emotion-analysis-v1.p.rapidapi.com/analyze/",
-//     "method": "POST",
-//     "headers": {
-//         "x-rapidapi-host": "twinword-emotion-analysis-v1.p.rapidapi.com",
-//         "x-rapidapi-key": "INSERT_API_KEY",
-//         "content-type": "application/x-www-form-urlencoded"
-//     },
-//     "data": {
-//         "text": "“I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best.”"
-//     }
-// }
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });
-
-// RANDOM JOKES API
-
-// axios.get('https://sv443.net/jokeapi/v2/joke/Miscellaneous?blacklistFlags=nsfw,religious,political,racist,sexist')
-// .then((response) => {
-//     console.log(response)
-// })
-
-// SONG SIMILARITY API
-
-// var settings = {
-// 	"async": true,
-// 	"crossDomain": true,
-// 	"url": 'https://searchly.asuarez.dev/api/v1/similarity/by_content',
-//     "method": "POST",
-//     "data": JSON.stringify({"content": "I'm selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can't handle me at my worst, then you sure as hell don't deserve me at my best."}),
-//     "contentType": "application/json"
-// }
-
-// $.ajax(settings).done(function (response) {
-// 	console.log(response);
-// });

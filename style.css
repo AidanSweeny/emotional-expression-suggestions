@@ -28,6 +28,10 @@ body {
   cursor: pointer;
 }
 
+.recipe-preview-li:hover {
+  font-weight: bold;
+}
+
 .prevPage {
   margin-right: 4px;
 }

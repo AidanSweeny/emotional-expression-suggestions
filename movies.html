@@ -7,7 +7,6 @@
 
     <title>L.I.F.E. - Movies</title>
 
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -51,14 +50,16 @@
                     <option value="878">Science Fiction</option>
                 </select>
             </div>
-            <select id="searchBy" name="searchBy">
-                <option value="Popularity">Popularity</option>
-                <option value="Alphabetically(A-Z)">Alphabetically(A-Z)</option>
-                <option value="Alphabetically(Z-A)">Alphabetically(Z-A)</option>
-                <option value="Release Date(new-old)">Release Date(new-old)</option>
-                <option value="Release Date(old-new)">Release Date(old-new)</option>
-                <option value="Revenue">Revenue</option>
-            </select>
+            <div class="input-field">
+                <select id="searchBy" name="searchBy">
+                    <option value="Popularity">Popularity</option>
+                    <option value="Alphabetically(A-Z)">Alphabetically(A-Z)</option>
+                    <option value="Alphabetically(Z-A)">Alphabetically(Z-A)</option>
+                    <option value="Release Date(new-old)">Release Date(new-old)</option>
+                    <option value="Release Date(old-new)">Release Date(old-new)</option>
+                    <option value="Revenue">Revenue</option>
+                </select>
+            </div>
             <button class="pulse btn wow animated" type="submit" id = "movieSearch"><i class="fa fa-search"></i></button>
             <button class="pulse btn wow animated" id = "randomButton">Random</button>
             <h4>OR</h4>
@@ -68,26 +69,20 @@
 
         <br><br>
         
-        <div id = "results"></div>
-        <p id = "pageTag"></p>
-        <div id = "pages"></div>
+        <div id="results"></div>
+        <p id="pageTag"></p>
+        <div id="pages"></div>
 
         <br>
         <button class="pulse btn wow animated" id="back-button" onclick="goBack()">Back</button>
     </div>
 
-    <script defer src="movies-script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script>
-        function goBack() {
-          window.history.back();
-        }
-        $(document).ready(function () {
-            $("select").material_select();
-        });
-    </script>
+    <script src="movies-script.js"></script>
+    <script src="script.js"></script>
         
 </body>
 </html>

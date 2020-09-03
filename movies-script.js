@@ -41,7 +41,7 @@ $("#movieSearch").on("click", function(event) {
     $("#results").empty();
     event.preventDefault();
     var year = $("#year").val()
-    var genre = $("#genre").attr("value");
+    var genre = $("#genre").val();
     console.log(genre);
     var searchBy = $("#searchBy").val();
     queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=ed2eb23526f1f24fbea2ca4d8a1e10fc&language=en-US&with_original_language=en&include_adult=false&page=1";
@@ -126,7 +126,7 @@ $("#pages").on("click", "button.prevPage", function(event){
 $("#randomButton").on("click", function(event) {
     event.preventDefault();
     var year = $("#year").val()
-    var genre = $("#genre").attr("value");
+    var genre = $("#genre").val();
     console.log(genre);
     var searchBy = $("#searchBy").val();
     queryURL = "https://api.themoviedb.org/3/discover/movie?api_key=ed2eb23526f1f24fbea2ca4d8a1e10fc&language=en-US&with_original_language=en&include_adult=false&page=1";
